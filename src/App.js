@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   const [name, setName] = useState('');
-  const [nameList, setNameList] = useState(['halo', "halo"])
+  const [nameList, setNameList] = useState([])
 
   const handleChange = (e) => {
     setName(e.target.value)
@@ -30,7 +30,6 @@ function App() {
       <h1>List your friends names</h1>
       <InputField value={name} handleChange={handleChange} />
       <NameList listNames={listNames} />
-
       <Submit onSubmit={handleSubmit} />
     </div>
   );
